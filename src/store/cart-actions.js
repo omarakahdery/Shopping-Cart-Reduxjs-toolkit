@@ -4,7 +4,7 @@ export const fetchCartData = () => {
   return async (dispatch) => {
     const fetchData = async () => {
       const response = await fetch(
-        "https://react-http-4a67a-default-rtdb.europe-west1.firebasedatabase.app/cart.json"
+        "URL"
       );
       if (!response.ok) {
         throw new Error("Could not fetch cart data!");
@@ -43,7 +43,7 @@ export const sendCartData = (cart) => {
     );
     const sendReq = async () => {
       const response = await fetch(
-        "https://react-http-4a67a-default-rtdb.europe-west1.firebasedatabase.app/cart.json",
+        "URL",
         {
           method: "PUT",
           body: JSON.stringify(cart),
